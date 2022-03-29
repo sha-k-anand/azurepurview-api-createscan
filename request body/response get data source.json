@@ -1,0 +1,11 @@
+{'value': [
+        {'properties': {'serverEndpoint': 'sqlserver0001.database.windows.net', 'resourceGroup': 'sqlserver001', 'subscriptionId': 'c8ae7563-2954-4307-b209-e472425469f4', 'location': 'southcentralus', 'resourceName': 'shakasqlserver0001', 'resourceId': '/subscriptions/c8ae7563-2954-4307-b209-e472425469f4/resourceGroups/sqlserver001/providers/Microsoft.Sql/servers/shakasqlserver0001', 'dataUseGovernance': 'Disabled', 'createdAt': '2022-03-17T19: 05: 23.3090763Z', 'lastModifiedAt': '2022-03-17T19: 05: 23.3090763Z', 'parentCollection': None, 'collection': {'lastModifiedAt': '2022-03-17T19: 05: 23.3090763Z', 'referenceName': 'zzazurepurview01', 'type': 'CollectionReference'
+                }, 'dataSourceCollectionMovingState': 0
+            }, 'kind': 'AzureSqlDatabase', 'id': 'datasources/AzureSqlDatabase-vnX', 'name': 'AzureSqlDatabase-vnX'
+        },
+        {'properties': {'serverEndpoint': 'WINDEV2112EVAL\\SK1', 'resourceGroup': None, 'subscriptionId': None, 'location': None, 'resourceName': None, 'resourceId': None, 'dataUseGovernance': 'Disabled', 'createdAt': '2022-03-22T13: 40: 59.2221519Z', 'lastModifiedAt': '2022-03-25T01: 48: 16.5723207Z', 'parentCollection': None, 'collection': {'lastModifiedAt': '2022-03-22T13: 40: 59.2221519Z', 'referenceName': 'zzazurepurview01', 'type': 'CollectionReference'
+                }, 'dataSourceCollectionMovingState': 0
+            }, 'kind': 'SqlServerDatabase', 'id': 'datasources/SqlServer-MoF', 'name': 'SqlServer-MoF'
+        }
+    ], 'count': 2
+}

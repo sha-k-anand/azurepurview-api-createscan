@@ -1,0 +1,27 @@
+{'value': [
+        {'properties': {'credential': {'referenceName': 'cred', 'credentialType': 'SqlAuth'
+                }, 'enableLineage': False, 'recurrenceInterval': None, 'serverEndpoint': 'WINDEV2112EVAL\\SK1', 'databaseName': 'AdventureWorks2019', 'scanRulesetName': 'SqlServer', 'scanRulesetType': 'System', 'collection': {'lastModifiedAt': '2022-03-29T04: 23: 09.2568533Z', 'referenceName': 'zzazurepurview01', 'type': 'CollectionReference'
+                }, 'createdAt': '2022-03-29T04: 23: 09.2568533Z', 'lastModifiedAt': '2022-03-29T04: 24: 08.0384862Z', 'connectedVia': {'referenceName': 'IntegrationRuntime-Quc', 'integrationRuntimeType': 'SelfHosted'
+                }
+            }, 'kind': 'SqlServerDatabaseCredential', 'id': 'datasources/SqlServer-MoF/scans/scandb01', 'name': 'scandb01'
+        },
+        {'properties': {'credential': {'referenceName': 'cred', 'credentialType': 'SqlAuth'
+                }, 'enableLineage': False, 'recurrenceInterval': None, 'serverEndpoint': 'WINDEV2112EVAL\\SK1', 'databaseName': 'db1', 'scanRulesetName': 'SqlServer', 'scanRulesetType': 'System', 'collection': {'lastModifiedAt': '2022-03-29T04: 23: 12.6057895Z', 'referenceName': 'zzazurepurview01', 'type': 'CollectionReference'
+                }, 'createdAt': '2022-03-29T04: 23: 12.6057895Z', 'lastModifiedAt': '2022-03-29T04: 24: 11.8625631Z', 'connectedVia': {'referenceName': 'IntegrationRuntime-Quc', 'integrationRuntimeType': 'SelfHosted'
+                }
+            }, 'kind': 'SqlServerDatabaseCredential', 'id': 'datasources/SqlServer-MoF/scans/scandb02', 'name': 'scandb02'
+        },
+        {'properties': {'credential': {'referenceName': 'cred', 'credentialType': 'SqlAuth'
+                }, 'enableLineage': False, 'recurrenceInterval': None, 'serverEndpoint': 'WINDEV2112EVAL\\SK1', 'databaseName': 'db2', 'scanRulesetName': 'SqlServer', 'scanRulesetType': 'System', 'collection': {'lastModifiedAt': '2022-03-29T04: 24: 19.4415052Z', 'referenceName': 'zzazurepurview01', 'type': 'CollectionReference'
+                }, 'createdAt': '2022-03-29T04: 24: 19.4415052Z', 'lastModifiedAt': '2022-03-29T04: 24: 19.4415052Z', 'connectedVia': {'referenceName': 'IntegrationRuntime-Quc', 'integrationRuntimeType': 'SelfHosted'
+                }
+            }, 'kind': 'SqlServerDatabaseCredential', 'id': 'datasources/SqlServer-MoF/scans/scandb03', 'name': 'scandb03'
+        },
+        {'properties': {'credential': {'referenceName': 'cred', 'credentialType': 'SqlAuth'
+                }, 'enableLineage': False, 'recurrenceInterval': None, 'serverEndpoint': 'WINDEV2112EVAL\\SK1', 'databaseName': 'db3', 'scanRulesetName': 'SqlServer', 'scanRulesetType': 'System', 'collection': {'lastModifiedAt': '2022-03-29T04: 24: 22.6049216Z', 'referenceName': 'zzazurepurview01', 'type': 'CollectionReference'
+                }, 'createdAt': '2022-03-29T04: 24: 22.6049216Z', 'lastModifiedAt': '2022-03-29T04: 24: 22.6049216Z', 'connectedVia': {'referenceName': 'IntegrationRuntime-Quc', 'integrationRuntimeType': 'SelfHosted'
+                }
+            }, 'kind': 'SqlServerDatabaseCredential', 'id': 'datasources/SqlServer-MoF/scans/scandb04', 'name': 'scandb04'
+        }
+    ], 'count': 4
+}
