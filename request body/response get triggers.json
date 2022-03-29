@@ -1,11 +1,31 @@
-{'properties': {'recurrence': {'frequency': 'Month', 'interval': 1, 'startTime': '2022-03-28T14: 59: 00.416Z', 'endTime': '2023-03-25T00: 00: 00Z', 'schedule': {'minutes': [
-                    56
-                ], 'hours': [
-                    23
-                ], 'weekDays': None, 'monthDays': [
-                    10
-                ], 'monthlyOccurrences': None
-            }, 'timezone': None
-        }, 'recurrenceInterval': None, 'createdAt': '2022-03-29T04: 23: 10.5083431Z', 'lastModifiedAt': '2022-03-29T04: 24: 09.435548Z', 'lastScheduled': None, 'scanLevel': 'Incremental'
-    }, 'id': 'datasources/SqlServer-MoF/scans/scandb01/triggers/default', 'name': 'default'
-}
+{
+    "properties":{
+       "recurrence":{
+          "frequency":"Month",
+          "interval":1,
+          "startTime":"2022-03-28T14: 59: 00.416Z",
+          "endTime":"2023-03-25T00: 00: 00Z",
+          "schedule":{
+             "minutes":[
+                56
+             ],
+             "hours":[
+                23
+             ],
+             "weekDays":"None",
+             "monthDays":[
+                10
+             ],
+             "monthlyOccurrences":"None"
+          },
+          "timezone":"None"
+       },
+       "recurrenceInterval":"None",
+       "createdAt":"2022-03-29T04: 23: 10.5083431Z",
+       "lastModifiedAt":"2022-03-29T04: 24: 09.435548Z",
+       "lastScheduled":"None",
+       "scanLevel":"Incremental"
+    },
+    "id":"datasources/SqlServer-MoF/scans/scandb01/triggers/default",
+    "name":"default"
+ }
