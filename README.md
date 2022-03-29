@@ -1,5 +1,3 @@
-# azurepurview-api-createscan
-
 # Azure Purview Scanning
 
 When scanning OnPrem or Azure SQL servers with Purview, Purview allows only the below two options
@@ -15,23 +13,18 @@ This repo has a python code that programatically creates the scans/triggers via 
 
 
 # Purview APIs for Scan and Trigger Creation
-https://docs.microsoft.com/en-us/rest/api/purview/scanningdataplane/data-sources/list-all
-https://docs.microsoft.com/en-us/rest/api/purview/scanningdataplane/triggers/get-trigger
-https://docs.microsoft.com/en-us/rest/api/purview/scanningdataplane/scans/create-or-update
+- https://docs.microsoft.com/en-us/rest/api/purview/scanningdataplane/data-sources/list-all
+- https://docs.microsoft.com/en-us/rest/api/purview/scanningdataplane/triggers/get-trigger
+- https://docs.microsoft.com/en-us/rest/api/purview/scanningdataplane/scans/create-or-update
 
+# Purview APIs for Scan and Trigger Creation (sample API)
+- https://purviewinstancename.scan.purview.azure.com/datasources?api-version=2018-12-01-preview
+- https://purviewinstancename.scan.purview.azure.com/datasources/ds01/scans/scan01?api-version=2018-12-01-preview
+- https://purviewinstancename.scan.purview.azure.com/datasources/ds01/scans/scan01/triggers/default?api-version=2018-12-01-preview
 
 # Authentication to invoke Purview APIs
-https://docs.microsoft.com/en-us/azure/purview/tutorial-using-rest-apis
+- https://docs.microsoft.com/en-us/azure/purview/tutorial-using-rest-apis
 
-
-# Structrue of the Config file
-
-Scan Name|Database Name|Recurrence Frequency|Hour|Minute|Day of the Month|
---|--|--|--|--|--|
-scandb01|AdventureWorks2019|Month|23|56|10
-scandb02|db1|Month|13|56|10
-scandb03|db2|Month|15|56|10
-scandb04|db3|Month|17|56|10
 
 # Steps
 1. Setup Service Principal in Azure Active Directory
@@ -41,5 +34,18 @@ scandb04|db3|Month|17|56|10
 5. Create a single scan and trigger for a database via Purview UI (we will use this a template to create the rest of the scan via APIs)
 6. Build the config file (.txt) with the list of databases
 7. Run the 'purview api get scan and trigger.py' file and review the JSON output
-8. Update the JSON output from the above in 'purview api create scan and trigger.py'
-9. Execute the python code
+8. Update the tenant ID,Client ID and Secret in the code
+9. Update the JSON output from the above in 'purview api create scan and trigger.py'
+10. Execute the python code - 'purview api create scan and trigger.py'
+
+# Structure of the Config file (scanlist.txt)
+
+Scan Name|Database Name|Recurrence Frequency|Hour|Minute|Day of the Month|
+--|--|--|--|--|--|
+scandb01|AdventureWorks2019|Month|23|56|10
+scandb02|db1|Month|13|56|10
+scandb03|db2|Month|15|56|10
+scandb04|db3|Month|17|56|10
+
+# Scans and Triggers created via APIs
+![Scan Setup](screenshots/scanscreatedviaapis.jpeg)
