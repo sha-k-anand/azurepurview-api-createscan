@@ -1,5 +1,3 @@
-
-from email import header
 import json
 import requests
 import os
@@ -46,24 +44,27 @@ with open(infile_folder) as csv_file:
         scanminute=row[4]
         scanday=row[5]
         print(f'\t{row[0]} | {row[1]} ')
-        line_count += 1
 
+        print(f'Submitting Scan for {scanname}... Started')
         mydata='{    "properties": {        "credential": {            "referenceName": "cred",            "credentialType": "SqlAuth"        },        "recurrenceInterval": null,        "serverEndpoint": "WINDEV2112EVAL\\\SK1",        "databaseName": "'+ dbname +'",        "scanRulesetName": "SqlServer",        "scanRulesetType": "System",        "collection": {            "referenceName": "zzazurepurview01",            "type": "CollectionReference"        },            "connectedVia": {            "referenceName": "IntegrationRuntime-Quc",            "integrationRuntimeType": "SelfHosted"        }    },    "kind": "SqlServerDatabaseCredential"}'
         mydata1=json.loads(mydata)
         url = 'https://'+ purviewinstancename +'.scan.purview.azure.com/datasources/'+ purviewdatasourcename +'/scans/'+ scanname +'?api-version=2018-12-01-preview'
-        #out=requests.put(url,json=mydata1,headers=myheaders)
-        #print(out.json())
+        out=requests.put(url,json=mydata1,headers=myheaders)
+        print(out.json())
+        print(f'Submitting Scan for {scanname}... Completed')
+        print()
 
+        print(f'Submitting Trigger for {scanname}... Started')
         mydata='{  "properties": {    "recurrenceInterval": null,    "scanLevel": "Incremental",    "recurrence": {      "startTime": "2022-03-28T14:59:00.416Z",      "endTime": "2023-03-25T00:00:00.000Z",      "interval": 1,      "frequency": "Month",      "schedule": {        "hours": [          ' + scanhour +'        ],        "minutes": [          '+ scanminute +'        ],        "monthDays": [          '+ scanday +'        ]      }    }  }} '
         mydata1=json.loads(mydata)
         url = 'https://'+ purviewinstancename +'.scan.purview.azure.com/datasources/'+ purviewdatasourcename +'/scans/'+ scanname +'/triggers/default?api-version=2018-12-01-preview'
-        print(mydata1)
         out=requests.put(url,json=mydata1,headers=myheaders)
         print(out.json())
+        print(f'Submitting Trigger for {scanname}... Completed')
+        line_count += 1
 
 
     print(f'Processed {line_count} lines.')
-
 
 
 
