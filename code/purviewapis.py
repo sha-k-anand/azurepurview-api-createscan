@@ -50,7 +50,7 @@ with open(infile_folder) as csv_file:
         mydata1=json.loads(mydata)
         url = 'https://'+ purviewinstancename +'.scan.purview.azure.com/datasources/'+ purviewdatasourcename +'/scans/'+ scanname +'?api-version=2018-12-01-preview'
         out=requests.put(url,json=mydata1,headers=myheaders)
-        print(out.json())
+        #print(out.json())
         print(f'Submitting Scan for {scanname}... Completed')
         print()
 
@@ -59,7 +59,7 @@ with open(infile_folder) as csv_file:
         mydata1=json.loads(mydata)
         url = 'https://'+ purviewinstancename +'.scan.purview.azure.com/datasources/'+ purviewdatasourcename +'/scans/'+ scanname +'/triggers/default?api-version=2018-12-01-preview'
         out=requests.put(url,json=mydata1,headers=myheaders)
-        print(out.json())
+        #print(out.json())
         print(f'Submitting Trigger for {scanname}... Completed')
         line_count += 1
 

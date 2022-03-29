@@ -1,0 +1,22 @@
+{
+    "properties": {
+        "credential": {
+            "referenceName": "cred",
+            "credentialType": "SqlAuth"
+        },
+        "recurrenceInterval": null,
+        "serverEndpoint": "WINDEV2112EVAL\\SK1",
+        "databaseName": "db3",
+        "scanRulesetName": "SqlServer",
+        "scanRulesetType": "System",
+        "collection": {
+            "referenceName": "zzazurepurview01",
+            "type": "CollectionReference"
+        },
+        "connectedVia": {
+            "referenceName": "IntegrationRuntime-Quc",
+            "integrationRuntimeType": "SelfHosted"
+        }
+    },
+    "kind": "SqlServerDatabaseCredential"
+}
