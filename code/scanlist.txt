@@ -1,0 +1,4 @@
+scandb01|AdventureWorks2019|Month|23|56|10
+scandb02|db1|Month|13|56|10
+scandb03|db2|Month|15|56|10
+scandb04|db3|Month|17|56|10
