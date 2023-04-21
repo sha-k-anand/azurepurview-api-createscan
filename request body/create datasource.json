@@ -1,0 +1,23 @@
+{
+    "properties": {
+        "serverEndpoint": "shakasqlserver0001.database.windows.net",
+        "resourceGroup": "sqlserver001",
+        "subscriptionId": "c8ae7563-2954-4307-b209-e472425469f4",
+        "location": "southcentralus",
+        "resourceName": "shakasqlserver0001",
+        "resourceId": "/subscriptions/c8ae7563-2954-4307-b209-e472425469f4/resourceGroups/sqlserver001/providers/Microsoft.Sql/servers/shakasqlserver0001",
+        "dataUseGovernance": "Disabled",
+        "createdAt": "2022-08-08T14: 40: 29.5108053Z",
+        "lastModifiedAt": "2022-08-08T14: 40: 29.5108053Z",
+        "parentCollection": None,
+        "collection": {
+            "lastModifiedAt": "2022-08-08T14: 40: 29.5108053Z",
+            "referenceName": "zzazurepurview01",
+            "type": "CollectionReference"
+        },
+        "dataSourceCollectionMovingState": 0
+    },
+    "kind": "AzureSqlDatabase",
+    "id": "datasources/AzureSqlDatabase-AHQ",
+    "name": "AzureSqlDatabase-AHQ"
+}

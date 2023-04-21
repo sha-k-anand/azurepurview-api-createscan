@@ -46,7 +46,10 @@ with open(infile_folder) as csv_file:
         print(f'\t{row[0]} | {row[1]} ')
 
         print(f'Submitting Scan for {scanname}... Started')
-        mydata='{    "properties": {        "credential": {            "referenceName": "cred",            "credentialType": "SqlAuth"        },        "recurrenceInterval": null,        "serverEndpoint": "WINDEV2112EVAL\\\SK1",        "databaseName": "'+ dbname +'",        "scanRulesetName": "SqlServer",        "scanRulesetType": "System",        "collection": {            "referenceName": "zzazurepurview01",            "type": "CollectionReference"        },            "connectedVia": {            "referenceName": "IntegrationRuntime-Quc",            "integrationRuntimeType": "SelfHosted"        }    },    "kind": "SqlServerDatabaseCredential"}'
+        #mydata=  '{    "properties": {        "credential": {            "referenceName": "cred",            "credentialType": "SqlAuth"        },        "recurrenceInterval": null, "serverEndpoint": "WINDEV2112EVAL\\\SK1",        "databaseName": "'+ dbname +'",        "scanRulesetName": "SqlServer",        "scanRulesetType": "System",        "collection": {            "referenceName": "zzazurepurview01",            "type": "CollectionReference"        },            "connectedVia": {            "referenceName": "IntegrationRuntime-Quc",            "integrationRuntimeType": "SelfHosted"        }    },    "kind": "SqlServerDatabaseCredential"}'
+        mydata = '{    "properties": {        "credential": {            "referenceName": "azpurviewstgsvc", "credentialType": "SqlAuth"        },        "recurrenceInterval": null, "serverEndpoint": "S01VSSSQLCL001\\\Shore1",     "databaseName": "'+ dbname +'",        "scanRulesetName": "SqlServer",        "scanRulesetType": "System",        "collection": {            "referenceName": "5tqycb",                      "type": "CollectionReference"        },            "connectedVia": {            "referenceName": "IntegrationRuntime-S01VDSPVIEW002", "integrationRuntimeType": "SelfHosted"        }    },    "kind": "SqlServerDatabaseCredential"}'
+
+
         mydata1=json.loads(mydata)
         url = 'https://'+ purviewinstancename +'.scan.purview.azure.com/datasources/'+ purviewdatasourcename +'/scans/'+ scanname +'?api-version=2018-12-01-preview'
         out=requests.put(url,json=mydata1,headers=myheaders)
